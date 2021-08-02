@@ -1,0 +1,127 @@
+/* 
+    Margin:
+        Es la propiedad que nos permite generar espacio entre elementos.
+        Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar márgenes.
+        margin-top: Margen superior
+        margin-right: Margen derecho
+        margin-bottom: Margen inferior
+        margin-left: Margen izquierdo
+
+        Admite hasta 4 valores que van en el orden de las agujas del reloj.
+        4 valores -> margin:top right bottom left;
+        3 valores -> margin: top left/right bottom;
+        2 valores -> margin: top/bottom left/right;
+        1 valor -> margin: top/right/bottom/left
+
+    Padding:
+        Es la propiedad que nos permite generar espacio interno entre el borde y la caja
+        Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding.
+        padding-top: padding superior
+        padding-right: padding derecho
+        padding-bottom: padding inferior
+        padding-left: padding izquierdo
+
+        Admite hasta 4 valores que van en el orden de las agujas del reloj.
+        4 valores -> padding:top right bottom left;
+        3 valores -> padding: top left/right bottom;
+        2 valores -> padding: top/bottom left/right;
+        1 valor -> padding: top/right/bottom/left
+
+    Border:
+        Es la propiedad que nos permite modificar el borde de la caja
+        Es un shorthand (propiedad abreviada) que agrupa 3 propiedades
+            border-width: ancho del borde
+                border-top-width
+                border-right-width
+                border-bottom width
+                border-left-width
+            border-style: estilo del borde
+                border-top-style
+                border-right-style
+                border-bottom style
+                border-left-style
+                Listado de valores para style:
+                    none
+                    hidden
+                    dotted
+                    dashed
+                    solid
+                    double
+                    groove
+                    ridge
+                    inset
+                    outset
+            border-color: color del borde
+                border-top-color
+                border-right-color
+                border-bottom color
+                border-left-color
+
+    Box-sizing:
+        Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades content, padding y border.
+        Los 2 valores que podemos darle son
+            content-box -> Valor por defecto
+            border-box -> Cálculo de tamaño del elemento incluyendo el padding y el border.
+*/
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.header{
+    background-color: steelblue;
+}
+
+.title{
+    width: 300px;
+}
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border:5px solid red;
+    /* margin-top: 100px; */
+    /* margin: 0 auto; */
+    /* padding: 50px 20px 100px 70px; */
+}
+
+.inline{
+    background-color: lightcoral;
+    color:inherit;
+    /* padding-bottom: 100px; */
+    /* margin-left: 100px; */
+}
+
+.buttons{
+    background-color: steelblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+
+.button{
+    margin-left: 90px;
+    padding: 25px 50px;
+    border: 20px solid red;
+    border-width: 20px;
+    border-style: solid;
+    border-color: red;
+    border-right-color:red;
+    border-right-width: 20px;
+    border-style: outset;
+}

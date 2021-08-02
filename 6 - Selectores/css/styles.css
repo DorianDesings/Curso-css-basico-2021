@@ -1,0 +1,102 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+            Selector Universal -> *
+            Selector de tipo o etiqueta -> Nombre de la etiqueta
+        Selectores de atributo
+            id -> id del elemento
+            clase -> clase del elemento
+            otros atributos
+                [atributo]->Selecciona los elementos con ese atributo
+                [atributo=valor]->Selecciona los elementos que coincidan con el atributo=valor
+                [atributo^=valor]-> Selecciona los elementos cuyo atributo comience con valor
+                [atributo*=valor]-> Selecciona los elementos cuyo atributo contenga valor
+                [atributo$=valor]-> Selecciona los elementos cuyo atributo termine con valor
+                [atributo|=valor]-> Selecciona los elementos cuyo atributo comience con valor o valor-
+                
+    Selectores Compuestos
+        Selectores Agrupados -> Se agrupan los selectores separados por comas y se escribe el estilo una sola vez 
+        Selectores Combinadores
+            Selector descendente -> Selecciona un elemento dentro de otro
+            Selector de hermano siguiente + -> Selecciona al hermano siguiente adyacente 
+            Selector de hermanos siguientes ~ -> Selecciona  a todos los hermanos siguientes
+            Selector de hijo directo > -> Selecciona SOLO los hijos directos
+*/
+
+.container > p{
+    background-color: tomato;
+}
+
+.text-2 + h2{
+    background-color: tomato;
+}
+
+.text-2 ~ .text{
+    background-color: teal;
+} 
+
+/* .text,
+.text-2,
+.text-3,
+.text-4{
+    background-color: steelblue;
+} */
+
+/* *{
+    background-color: lightcoral;
+}
+
+h1{
+    background-color: lightcyan;
+}
+
+p{
+    background-color: lightgreen;
+}
+
+ul{
+    background-color: red;
+}
+
+li{
+    background-color: blue;
+} */
+
+/* #title{
+    background-color: lightgreen;
+}
+
+.title{
+    background-color: lightsalmon;
+}
+
+.text{
+    background-color: limegreen;
+} */
+ 
+/*[href]{
+    background-color: mediumorchid;
+}
+
+[href="https://google.com"]{
+    background-color: orangered;
+}
+
+[href^="color"]{
+    background-color: red;
+}
+
+[href*="modo"]{
+    background-color: green;
+}
+
+[href$="azul"]{
+    background-color: steelblue;
+}
+
+[lang|="en"]{
+    background-color: magenta;
+} */
+

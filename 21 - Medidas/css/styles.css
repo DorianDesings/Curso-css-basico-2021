@@ -1,0 +1,110 @@
+/* 
+  Las medidas en CSS se pueden agrupar en 2 grupos, absolutas y relativas.
+
+  Las medidas absolutas NO CAMBIAN y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario.
+  La más usada es px (píxeles) cuya medida es 1/96 de 1in, pero existen otras como:
+      cm(centímetros) -> 1cm = 96px/2,54
+      mm(milímetros) -> 1mm = 1/10 de 1cm
+      Q(cuarto de de milímetro) -> 1Q = 1/40 de 1cm
+      in(inches, pulgadas) -> 1in = 2,54cm = 96px
+      pc(picas) -> 1pc = 1/16 de 1in
+      pt(puntos) -> 1pt = 1/72 de 1in
+
+  Las medidas relativas SIEMPRE dependen de un contexto son las que se recomienda utilizar en la gran mayoría de ocasiones porque nos van a permitir que todos los elementos escalen proporcionalemnte.
+  Las más usadas son em, rem, %, vw, vh, vmin y vmax aunque tenemos otras como:
+      ex -> Altura x de la fuente del elemento.
+      ch -> La medida del ancho del glifo "0" de la letra del elemento.
+      lh -> Altura de la línea del elemento.
+
+    rem -> Corresponde a la medida de la "m" de la raiz del documento (html).
+
+    ejemplo: 16px = 1rem
+    
+    em -> Corresponde a la medida de la "m" del contexto donde nos encontremos.
+
+    El estandar del tamaño de fuente por defecto en la raiz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO.
+
+    NOTA: Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente)
+
+  WIDTH:
+    % -> Cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
+
+    auto -> Cuando usamos auto le pedimos al navegador que calcule el ancho en función del espacio disponible.
+
+  HEIGHT:
+    % -> Cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, si no no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje se sustituirá automaticamente por auto.
+
+    auto -> Cuando utilizamos auto el alto lo calculará el navegador en base al contenido del elemento
+
+  NOTA: Height es una propiedad que tenéis que usar con mucho cuidado. Si no es necesario establecer un alto, dejad que el contenido sea el que decida el alto del elemento.
+
+  VIEWPORT
+    El viewport es el área útil donde se mostrará la página web. IMPORTANTE, tened en cuenta que es el area visible sin hacer scroll.
+    Podemos usar el viewport como medida de varias formas:
+      vw-> Viewport Width, hace referencia al ancho del viewport. 
+      vh -> Viewport Height, hace referencia al alto del viewport.
+      vmax -> Utiliza el valor más grande entre el ancho y el alto del viewport.
+      vmin -> Utiliza el valor más pequeño entre el ancho y el alto del viewport.
+
+      1vw = 1% del ancho del viewport
+      1vh = 1% del alto del viewport
+      1vmin = 1% del valor que sea más pequeño del viewport
+      1vmax = 1% del valor que sea más grande del viewport
+
+  Limitadores al ancho y alto
+    Cuando establecemos un width y/o un height con una medida que es relativa, es posible que no queramos que se respete esa medida en todos los casos.
+    Para ello tenemos propiedades que limitan esas medidas:
+      min-width: Indica el ancho minimo que puede alcanzar el elemento.
+      max-width: Indica el ancho máximo que puede alcanzar el elemento.
+      min-height: Indica el alto minimo que puede alcanzar el elemento.
+      max-height: Indica el alto máximo que puede alcanzar el elemento.
+*/
+
+html {
+  height: 300px;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+  color: lightcoral;
+  /* height: 500px; */
+}
+
+/* .header {
+  background-color: lightskyblue;
+  text-align: center;
+} */
+
+.box {
+  width: 100%;
+  /* max-width: 600px;
+  min-width: 300px; */
+  height: 60vw;
+  /* max-height: 300px;
+  min-height: 100px; */
+  /* padding-bottom: 30px; */
+  background-color: lightgreen;
+}
+
+/* .box-children {
+  position: sticky;
+  top: 0;
+  width: 50%;
+   width: 50vw;
+  width: 30vmax;
+  height: 150px;
+  background-color: lightseagreen;
+} */
+
+/* .title {
+  font-size: 3rem;
+} */
+
+/* .link {
+  background-color: lightcoral;
+  color: #333;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  font-size: 2rem;
+} */

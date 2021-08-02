@@ -1,0 +1,50 @@
+/* 
+  El stacking context o el contexto de apilamiento es el espacio donde nuestros elementos se van a ir apilando para que unos queden por detrás y otros por delante.
+
+  El orden del stacking context es: (de delante a atrás):
+    Elementos posicionados con un z-index de 1 ó más
+    Elementos posicionados sin z-index declarado (o z-index:auto)
+    Elementos no posicionados
+    Elementos con z-index negativo
+*/
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: #333;
+}
+
+.box-1 {
+  background-color: lightcoral;
+  position: relative;
+  z-index: 1;
+}
+
+.box-2 {
+  background-color: lightgreen;
+  margin-top: -50px;
+}
+
+.box-3 {
+  background-color: lightseagreen;
+}
+
+.container {
+  background-color: mediumslateblue;
+  margin-top: -50px;
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  background-color: #ccc;
+  position: relative;
+  z-index: 10;
+  opacity: 0.75;
+}
+
+.text {
+  margin: 0;
+  margin-top: -40px;
+}
